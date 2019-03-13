@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Licznik czasu przebywania na stronie</title>
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC&amp;subset=latin-ext" rel="stylesheet">
+</head>
+
+<body>
+
+    <script>
+        // const add = (start = 5) => {
+        // let number = start;
+
+        // return () => {
+        //     number++;
+        //     document.body.textContent = `Liczba kliknięć to ${number}`
+        // }
+
+        // }
+        // const counter = add()
+
+        // document.addEventListener("click", counter);
+
+
+        ///////////////////ZADANIE////////////////
+        // const add = (start = 0) => {
+        // let time = start;
+
+        // return () => {
+        //     time++;
+        //     document.body.textContent = `${time} sekundy`;
+
+        //     document.addEventListener("click", function(){
+        //     time = 0;
+        // });
+
+        // }
+
+        // }
+        // const counter = add()
+        // setInterval(counter, 1000)
+
+        //////2 podejśicie ////////////////
+
+
+        // const add = (start = 0) => {
+        //     let time = start;
+        //     const btn = document.createElement("button");
+        //     btn.style.minHeight = "0px";
+        //     btn.style.minWidth = "0px";
+        //     btn.style.padding = "10px 40px";
+        //     btn.style.fontFamily = 'Amatic SC, cursive';
+        //     btn.style.fontSize = '60px';
+        //     document.body.appendChild(btn);
+
+        //     return () => {
+        //         time++;
+        //         btn.textContent = `${time} sekund`;
+        //         document.addEventListener("click", function(){
+        //             time = 0;
+        //         })
+        //     }
+        // }
+
+        // const counter = add()
+        // setInterval(counter, 1000)
+
+
+        // const add = (start = 0) => {
+        //     let time = start;
+        //     const btn = document.createElement("button");
+        //     btn.style.minHeight = "0px";
+        //     btn.style.minWidth = "0px";
+        //     btn.style.padding = "10px 40px";
+        //     btn.style.fontFamily = 'Amatic SC, cursive';
+        //     btn.style.fontSize = '60px';
+        //     document.body.appendChild(btn);
+        //     btn.textContent = 0 +" sekund";
+
+        //     return () => {
+        //         time++;
+        //         btn.textContent = time + " sekund"
+        //         document.addEventListener("click", function(){
+        //             time = 0;
+        //         })
+        //     }
+        // }
+
+        // const counter = add()
+        // setInterval(counter, 1000)
+
+
+
+
+        // const clock = () => {
+        // let secound = 0;
+        // document.body.textContent = 0 + " sekund";
+
+        // const timer = () => {
+        // secound++
+        // document.body.textContent = secound + " sekund";
+        // }
+        // return timer;
+        // }
+
+        // const counter = clock()
+        // setInterval(counter, 1000)
+
+        const clock = () => {
+            let secound = 0;
+            document.body.textContent = 0 + ` sekund`;
+
+            return () => {
+                secound++;
+                document.body.textContent = secound + ` sekund`;
+            }
+
+
+        }
+        const counter = clock()
+        setInterval(counter, 1000)
+    </script>
+</body>
+
+</html>
